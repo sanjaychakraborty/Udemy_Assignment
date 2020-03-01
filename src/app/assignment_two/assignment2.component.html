@@ -1,29 +1,35 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
-            <div class="form-group">
-              <div class="row">
-                    <label for="">User Name</label>
-                    <input type="text"
-                      class="form-control"
-                      name=""
-                      id=""
-                      aria-describedby="helpId"
-                      placeholder="Enter you name"
-                      [(ngModel)]= "this.username">
-                    <small id="helpId" class="form-text text-muted">{{this.username}}</small>
-              </div>
-              <div class="row">
-                  <button
-                  type="button"
-                  class="btn btn-primary"
-                  [disabled]="this.username.length == 0"
-                  (click) = "this.onButtonClick()"
-                  >
-                  Reset
-                  </button>
-              </div>
+          <div class="row">
+            <app-warning></app-warning>
+          </div>
+          <div class="row">
+            <app-success></app-success>
+          </div>
+          <div class="form-group">
+            <div class="row">
+                  <label for="">User Name</label>
+                  <input type="text"
+                    class="form-control"
+                    name=""
+                    id=""
+                    aria-describedby="helpId"
+                    placeholder="Enter you name"
+                    [(ngModel)]= "this.username">
+                  <small id="helpId" class="form-text text-muted">{{this.username}}</small>
             </div>
+            <div class="row">
+                <button
+                type="button"
+                class="btn btn-primary"
+                [disabled]="this.username.length == 0"
+                (click) = "this.onButtonClick()"
+                >
+                Reset
+                </button>
+            </div>
+          </div>
         </div>
     </div>
 </div>
